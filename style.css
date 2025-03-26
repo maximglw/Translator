@@ -1,0 +1,247 @@
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  min-height: 100vh;
+  background: #06283D;
+}
+
+.container {
+  max-width: 690px;
+  width: 100%;
+  padding: 30px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.01);
+}
+
+.wrapper {
+  border-radius: 20px;
+}
+
+.wrapper .text-input {
+  display: flex;
+  gap: 20px;
+}
+
+.text-input textarea {
+  height: 250px;
+  width: 100%;
+  resize: none;
+  font-size: 18px; 
+  border: none;
+  padding: 1rem;
+  border-radius: 20px;
+  background: #e8e8e8;
+  box-shadow: 0px 0px 20px #c5c5c5;
+  transition: 0.3s;
+}
+
+.text-input textarea::placeholder {
+  color: #b7b6b6;
+}
+
+.text-input .from-text:active {
+    transform: scale(0.95);
+  }
+  
+  .text-input .from-text:focus {
+    border: 2px solid grey;
+  }
+
+.controls,
+li,
+.icons,
+.icons i {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.controls {
+  list-style: none;
+  padding: 12px 15px;
+}
+
+.controls .row .icons {
+  width: 38%;
+}
+
+.controls .row .icons i {
+  width: 50px;
+  color:rgb(68, 67, 67);
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  justify-content: center;
+}
+
+.controls .row.from .icons {
+  padding-right: 15px;
+  border-right: 1px solid #ccc;
+}
+
+.controls .row.to .icons {
+  padding-left: 15px;
+  border-left: 1px solid #ccc;
+}
+
+.controls .row select {
+  color: rgb(68, 67, 67);
+  border: none;
+  outline: none;
+  font-size: 18px;
+  background: none;
+  padding-left: 5px;
+}
+
+.text-input textarea::-webkit-scrollbar {
+  width: 4px;
+}
+
+.controls .row select::-webkit-scrollbar {
+  width: 8px;
+}
+
+.text-input textarea::-webkit-scrollbar-track,
+.controls .row select::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+.text-input textarea::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 8px;
+}
+
+.controls .row select::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 8px;
+  border-right: 2px solid #ffffff;
+}
+
+.controls .exchange {
+  color: rgb(68, 67, 67);
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+.controls i:active {
+  transform: scale(0.9);
+}
+
+.container button {
+    width: 100%;
+    padding: 14px;
+    align-items: center;
+    border: 0;
+    background-color: rgb(68, 67, 67);
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #fff;;
+    display: flex;
+    font-size: 18px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.container button:active,
+button:hover {
+  outline: 0;
+}
+
+.container button span {
+    background-color: rgb(5, 6, 45);
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+  }
+
+.container button:active {
+    transform: scale(0.9);
+  }
+
+  @media (max-width: 660px) {
+    .container {
+      padding: 20px;
+    }
+  
+    .wrapper .text-input {
+      flex-direction: column;
+      outline: none;
+    }
+  
+    .text-input textarea {
+      height: 200px;
+      outline: none;
+    }
+  
+    /* Flexbox-Layout für die Controls-Container */
+    .controls .row {
+      display: flex;
+      flex-direction: column; /* Stellt sicher, dass die Items untereinander angezeigt werden */
+      align-items: center; /* Zentriert die Elemente */
+      gap: 10px; /* Abstand zwischen den Elementen */
+    }
+  
+    .controls .row .icons {
+      display: flex; 
+      justify-content: center; 
+      align-items: center;
+      width: 100%; 
+      order: 1;
+    }
+  
+    /* Icons etwas größer und mit mehr Abstand */
+    .controls .row .icons i {
+      font-size: 18px;
+      margin: 5px; /* Abstand zwischen den Icons */
+    }
+
+    .controls .row.to .icons {
+        padding-left: 15px;
+        border-left: 0px;
+      } 
+
+    .controls .row.from .icons {
+        padding-left: 15px;
+        border-right: 0px;
+     } 
+  
+    .controls .row select {
+      font-size: 16px;
+      order: 2;
+    }
+  
+    .controls .exchange {
+        font-size: 14px;
+        margin-top: 40px;
+    }
+  
+    .container button {
+      padding: 13px;
+      font-size: 16px;
+    }
+  }
