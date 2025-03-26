@@ -190,6 +190,7 @@ button:hover {
 
     .container {
       padding: 20px;
+      margin-bottom: 100px; 
     }
   
     .wrapper .text-input {
